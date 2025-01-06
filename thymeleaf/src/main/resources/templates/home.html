@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<p>This is home</p>
+//If you have to print anythinh you have to use dollar
+<p>Welcome, <span th:text="${name}"></span></p>
+<span th:text="${#strings.toUpperCase(name)}"></span>
+//# is used to access the functions
+<div th:with="someVariable=${someValue},a=20,b=30">
+    <p th:text="'Value of a*b:'+${a}*${b}"></p>
+
+</div>
+
+</body>
+</html>
