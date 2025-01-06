@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <script type="text/javascript" th:src="@{js/main.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{css/main.css}"></link>
 </head>
 <body>
 <p>This is home</p>
@@ -12,8 +14,11 @@
 //# is used to access the functions
 <div th:with="someVariable=${someValue},a=20,b=30">
     <p th:text="'Value of a*b:'+${a}*${b}"></p>
+    <button id="click-button" onclick="main()">Click here</button>
 
+    <footer id="parent-footer" th:include="Fragments/demoHtml :: header">
+        <h1>From home </h1>
+    </footer>
 </div>
-
 </body>
 </html>
